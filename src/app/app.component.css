@@ -1,0 +1,15 @@
+.container {
+  padding: 1rem;
+  height: 200px;
+  width: 200px;
+  border: 1px solid black;
+}
+
+
+.container.container-red {
+  background-color: red;
+}
+
+.container.container-green {
+  background-color: green;
+}
