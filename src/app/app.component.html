@@ -1,4 +1,84 @@
-<div appRoundedBlock appDraggable>
+<app-lista-de-usuarios></app-lista-de-usuarios>
+
+<p>
+  {{ today | date: 'longDate' }}
+</p>
+<p>
+  {{ price | currency: 'EUR' }}
+</p>
+
+
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+
+
+<!-- BINDING -->
+
+<!-- [] Del componente al elemento -->
+<p [style.color]="'cyan'">Lorem</p>
+
+<!-- () Del elemento al componente-->
+<button (click)="alternarEnabled()" >Alternar</button>
+
+<!-- [()] En doble direccion-->
+<p>
+  <input [(ngModel)]="email" type="email" />
+
+  El email ingresado es: {{ email }}
+
+  <button (click)="email = ''">Borrar valor</button>
+</p>
+
+
+
+
+<!-- DIRECTIVAS ESTRUCTURALES -->
+
+<div [ngSwitch]="valor">
+  <span *ngSwitchCase="1">El valor es 1</span>
+  <span *ngSwitchCase="2">El valor es 2</span>
+
+  <span *ngSwitchDefault>
+    No es ningun valor valido
+  </span>
+</div>
+
+
+
+
+<p *ngIf="enabled; else noEsVerdaderoTemplate">Activo</p>
+<ng-template #noEsVerdaderoTemplate>
+  <p>Inactivo</p>
+</ng-template>
+
+
+
+
+
+<ul>
+  <li *ngFor="let heroe of heroes">
+    {{ heroe }}
+  </li>
+</ul>
+
+
+
+
+<!-- DIRECTIVAS PERSONALIZADAS -->
+<!-- <div appRoundedBlock appDraggable>
   <p>
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, hic. Nostrum corporis ducimus deleniti soluta, consequatur veniam debitis ullam ut modi labore magni porro velit laborum dignissimos vel dicta. Vel.
   </p>
@@ -12,7 +92,7 @@
   <li>A</li>
   <li>B</li>
   <li>C</li>
-</ul>
+</ul> -->
 
 
 <!-- DIRECTIVAS DE ATRIBUTO -->
