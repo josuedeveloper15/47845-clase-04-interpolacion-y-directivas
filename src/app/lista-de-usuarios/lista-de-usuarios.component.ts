@@ -11,10 +11,17 @@ export class ListaDeUsuariosComponent {
     {
       nombre: 'Josue',
       fechaInscripcion: new Date(),
+      aprobado: false,
     },
     {
       nombre: 'Ana',
       fechaInscripcion: new Date(),
+      aprobado: true,
+    },
+    {
+      nombre: 'JOrge',
+      fechaInscripcion: new Date(),
+      aprobado: false,
     },
   ];
 }
